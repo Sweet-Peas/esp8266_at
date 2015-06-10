@@ -17,7 +17,7 @@ if [ $? == 0 ];then
   xtensa-lx106-elf-objcopy --only-section .rodata -O binary eagle.app.v6.out eagle.app.v6.rodata.bin
   xtensa-lx106-elf-objcopy --only-section .irom0.text -O binary eagle.app.v6.out eagle.app.v6.irom0text.bin
 
-  ../../../../../tools/gen_appbin.py eagle.app.v6.out 2 0 2 5
+  ../../../../../tools/gen_appbin.py eagle.app.v6.out 1 0 2 5
 
   ../../../../../tools/gen_flashbin.py eagle.app.flash.bin eagle.app.v6.irom0text.bin
 
